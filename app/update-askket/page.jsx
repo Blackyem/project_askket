@@ -8,10 +8,10 @@ import Form from "/components/Form"
  
 const EditAskket = () => { 
   const router = useRouter();
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams(); 
   const askketId = searchParams.get("id");  
 
-  const [submitting, setSubmitting] = useState(false);
+  const [submitting, setIsSubmitting] = useState(false);
   const [post, setPost] = useState({ askket: "", tag: "",  });
 
 
@@ -32,7 +32,7 @@ const EditAskket = () => {
    
    const updateAskket = async (e) => {
     e.preventDefault();
-    setSubmitting(true);
+    setIsSubmitting(true);
 
    if(!askketId) return alert("Askket ID not found")
 
@@ -51,20 +51,21 @@ const EditAskket = () => {
      } catch (error) {
        console.log(error);
      } finally {
-      setSubmitting(false)
+      setIsSubmitting(false)
      }
 
    };
  
   return (
-    <Form 
-      type="Edit"
-      post={post}
-      setPost={setPost}
-      submitting={submitting}
-      handleSubmit={updateAskket}
-    />
-  ) 
-}
+      <Form 
+        type="Edit"
+        post={post}
+        setPost={setPost}
+        submitting={submitting}
+        handleSubmit={updateAskket}
+        />
+   
+    ) 
+   }
  
 export default EditAskket;
