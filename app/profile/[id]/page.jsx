@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+
 
 import Profile from "/components/Profile";
 
@@ -26,14 +26,13 @@ const UserProfile = ({ params }) =>  {
    }, [params.id]);
 
    return (
-    <Suspense>
+    
      <Profile
        name={userName}
        desc={`Welcome to ${userName}"s personalised profile page. 
-       Explore ${userName}"s exceptional askkets and be inspired by the power of their imagination`}  
+        Explore ${userName}"s exceptional askkets and be inspired by the power of their imagination`}  
        data={userPosts}  
-       />
-    </Suspense>
+    />
   );
 };
 
