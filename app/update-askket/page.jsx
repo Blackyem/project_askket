@@ -66,6 +66,6 @@ const EditAskket = () => {
         />
    
     ) 
-   }
+  }
  
 export default EditAskket;
