@@ -67,5 +67,15 @@ const EditAskket = () => {
    
     ) 
   }
+
+
+  const Page = () => {
+    return (
+        <Suspense>
+            <EditAskket />
+        </Suspense>
+    )
+}
+
  
-export default EditAskket;
+export default Page;
