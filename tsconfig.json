@@ -2,8 +2,12 @@
   "compilerOptions": {
     "baseUrl": "src/",
     "paths": {
-      "@/styles/*": ["styles/*"],
-      "@/components/*": ["components/*"]
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/components/*": [
+        "components/*"
+      ]
     },
     "lib": [
       "dom",
@@ -25,14 +29,20 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "app/create_efficiency/page.jsx", "app/layout.jsx", "app/page.jsx", ".next/types/app/layout.js", "app/create-askket/page.jsx"  ],
+    "**/*.tsx",
+    "app/create_efficiency/page.jsx",
+    "app/layout.jsx",
+    "app/page.jsx",
+    ".next/types/app/layout.js",
+    "app/create-askket/page.jsx"
+  ],
   "exclude": [
     "node_modules"
   ]
